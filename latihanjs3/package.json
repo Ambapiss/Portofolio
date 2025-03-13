@@ -1,0 +1,12 @@
+{
+  "name": "latihanjs3",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "node server5.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
