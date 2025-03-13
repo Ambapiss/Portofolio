@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylee.css">
+    <title>Batu Kertas Gunting</title>
+</head>
+<body>
+    <section class="game">
+        <div class="score">
+            <div class="player-score">
+                <h2>Pemain</h2>
+                <p id="player-score">0</p>
+            </div>
+            <div class="computer-score">
+                <h2>Komputer</h2>
+                <p id="computer-score">0</p>
+            </div>
+        </div>
+
+        <div class="intro">
+            <h1>Batu Kertas Gunting</h1>
+            <button id="start-game">Mulai Bermain</button>
+        </div>
+
+        <div class="match fadeOut">
+            <h2 class="winner">Silahkan Pilih</h2>
+            <div class="hands">
+                <img class="player-hand" src="assets/batu.png" alt="">
+                <img class="computer-hand" src="assets/batu.png" alt="">
+            </div>
+            <div class="options">
+                <button class="option" data-choice="batu">Batu</button>
+                <button class="option" data-choice="kertas">Kertas</button>
+                <button class="option" data-choice="gunting">Gunting</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
