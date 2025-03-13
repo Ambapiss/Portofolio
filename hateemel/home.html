@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Halaman Login Pegawai</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff7e5f, #feb47b, #e7d3a6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .container h2 {
+            margin-bottom: 20px;
+        }
+        .bahasa {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="text-center">Halaman Login</h2>
+            <form id="form-login">
+              <div class="form-group">
+                <label for="nama">Nama:</label>
+                <input type="text" class="form-control" id="nama" name="nama" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block" >Login</button>
+            </form>
+            
+            <a href="">Lupa Kata Sandi?</a>
+            <div class="bahasa">Bahasa Indonesia(id)</div>
+          </div>
+        </div>
+      </div>
+      <script>
+        document.getElementById('tombol-login').addEventListener('click', function(e) {
+  e.preventDefault();
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value;
+
+
+  if (username === 'admin' && password === 'password') {
+    window.location.href = 'web selanjutnya';
+  } else {
+    alert('Username atau password salah!');
+  }
+});
+
+
+      </script>
+</body>
+</html>
+
+

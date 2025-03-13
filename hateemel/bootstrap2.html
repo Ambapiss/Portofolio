@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halaman Login</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="text-center">Halaman Login</h2>
+        <form id="form-login">
+          <div class="form-group">
+            <label for="nama">Nama:</label>
+            <input type="text" class="form-control" id="nama" name="nama" required>
+          </div>
+          <div class="form-group">
+            <label for="kelas">Kelas:</label>
+            <select class="form-control" id="kelas" name="kelas" required>
+              <option value="">Pilih Kelas</option>
+              <option value="X">X</option>
+              <option value="XI">XI</option>
+              <option value="XII">XII</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="Jurusan">Jurusan:</label>
+            <input type="text" class="form-control" id="Jurusan" name="Jurusan" required>
+          </div>
+          <div class="form-group">
+            <label for="tempat_lahir">Tempat Lahir:</label>
+            <input type="text" class="form-control" id="tempat_lahir" name="tempat_lahir" required>
+          </div>
+          <div class="form-group">
+            <label for="tanggal_lahir">Tanggal Lahir:</label>
+            <input type="date" class="form-control" id="tanggal_lahir" name="tanggal_lahir" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </form>
+        <div id="hasil-login" class="mt-4"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#form-login').submit(function(e) {
+        e.preventDefault();
+        var nama = $('#nama').val();
+        var kelas = $('#kelas').val();
+        var jurusan = $('#Jurusan').val();
+        var tempat_lahir = $('#tempat_lahir').val();
+        var tanggal_lahir = $('#tanggal_lahir').val();
+        var email = $('#email').val();
+        var password = $('#password').val();
+
+        var hasil = `
+          <h2>Data Siswa</h2>
+          <p>Nama: ${nama}</p>
+          <p>Kelas: ${kelas}</p>
+          <p>Jurusan: ${jurusan}</p>
+          <p>Tempat Lahir: ${tempat_lahir}</p>
+          <p>Tanggal Lahir: ${tanggal_lahir}</p>
+          <p>Email: ${email}</p>
+          <p>Password: ********</p>
+        `;
+
+        $('#hasil-login').html(hasil);
+      });
+    });
+  </script>
+</body>
+</html>

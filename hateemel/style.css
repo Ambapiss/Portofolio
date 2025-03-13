@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  header {
+    background-image: url('1271045.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 10px;
+    color: #fffafa;
+  }
+  
+  nav {
+    background-color: #e8e8e8;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  main {
+    display: grid;
+    grid-template-areas: "section aside" "article aside";
+    grid-template-columns: 2.5fr 0.5fr;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  section {
+    grid-area: section;
+    background-color: #e3f2fd;
+    padding: 20px;
+    border: 1px solid #ddd;
+  }
+  
+  article {
+    grid-area: article;
+    background-color: #e3f2fd;
+    padding: 20px;
+    border: 1px solid #ddd;
+  }
+  
+  aside {
+    grid-area: aside;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: url('Real\ Madrid.jpeg') no-repeat center;
+    background-size: 100px;
+  }
+  
+  footer {
+    background-color: #ccc;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  
